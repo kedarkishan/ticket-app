@@ -3,9 +3,12 @@ import TicketCard from "./(components)/TicketCard";
 
 const getTickets = async () => {
   try {
-    const res = await fetch("http://localhost:3000/api/Tickets", {
-      cache: "no-store",
-    });
+    const res = await fetch(
+      "https://ticket-2jniwirwj-kedarkishans-projects.vercel.app/api/Tickets",
+      {
+        cache: "no-store",
+      }
+    );
 
     if (!res.ok) {
       throw new Error("Failed to fetch topics");
