@@ -1,9 +1,5 @@
 import mongoose, { Schema } from "mongoose";
-mongoose.connect(process.env.MONGODB_URI, {
-  useCreateIndex: true,
-
-  useFindAndModify: false,
-});
+mongoose.connect(process.env.MONGODB_URI, {});
 mongoose.Promise = global.Promise;
 
 const ticketSchema = new Schema(
