@@ -5,9 +5,12 @@ const DeleteBlock = ({ id }) => {
   const router = useRouter();
 
   const deleteTicket = async () => {
-    const response = await fetch(`http://localhost:3000/api/Tickets/${id}`, {
-      method: "DELETE",
-    });
+    const response = await fetch(
+      `https://ticket-app-gamma.vercel.app/api/Tickets/${id}`,
+      {
+        method: "DELETE",
+      }
+    );
     if (response.ok) {
       router.refresh();
     } else {
