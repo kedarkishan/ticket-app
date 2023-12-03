@@ -2,9 +2,12 @@ import React from "react";
 import TicketForm from "@/app/(components)/TicketForm";
 
 const getTicketById = async (id) => {
-  const response = await fetch(`http://localhost:3000/api/Tickets/${id}`, {
-    cache: "no-store",
-  });
+  const response = await fetch(
+    `https://ticket-app-gamma.vercel.app/api/Tickets/${id}`,
+    {
+      cache: "no-store",
+    }
+  );
 
   return response.json();
 };
