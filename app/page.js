@@ -7,12 +7,11 @@ const getTickets = async () => {
       "https://ticket-6r0flfjlq-kedarkishans-projects.vercel.app/api/Tickets",
       {
         cache: "no-store",
-        credentials: "omit",
       }
     );
 
     if (!res.ok) {
-      throw new Error("Failed to fetch topics");
+      throw new Error({ status: res.status, statusText: res.statusText });
     }
 
     return res.json();
